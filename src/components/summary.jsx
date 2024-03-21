@@ -1,8 +1,17 @@
 import React from "react";
 import Bar from "../assets/bar.png";
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import { FaRegDotCircle } from "react-icons/fa";
 
 const Summary = () => {
+  const left = Math.floor(Math.random() * 200);
+  const top = Math.floor(Math.random() * 20);
+
+  const custom = {
+    top: top,
+    left: left,
+  };
+
   return (
     <div className="flex flex-col bg-white rounded">
       <div className="flex items-center justify-between px-10 py-4">
@@ -10,6 +19,7 @@ const Summary = () => {
         <IoIosInformationCircleOutline className="h-6 w-6 text-gray-400" />
       </div>
       <div className="flex items-center justify-center py-5">
+        <FaRegDotCircle className=" text-blue-600 relative" style={custom} />
         <img src={Bar} className="" />
       </div>
       <div className="w-auto mx-auto flex items-center gap-x-8 my-3">

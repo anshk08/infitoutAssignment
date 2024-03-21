@@ -1,8 +1,16 @@
 import React from "react";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import Bar from "../assets/bar.png";
+import { FaRegDotCircle } from "react-icons/fa";
 
 const SupportResistance = () => {
+  const left = Math.floor(Math.random() * 200);
+  const top = Math.floor(Math.random() * 20);
+
+  const custom = {
+    top: top,
+    left: left,
+  };
   return (
     <div>
       <div className="flex flex-col bg-white rounded">
@@ -11,6 +19,7 @@ const SupportResistance = () => {
           <IoIosInformationCircleOutline className="h-6 w-6 text-gray-400" />
         </div>
         <div className="flex items-center justify-center pt-5">
+          <FaRegDotCircle className=" text-blue-600 relative" style={custom} />
           <img src={Bar} className="" />
         </div>
         <div className="flex items-center justify-center gap-10 mb-10 py-1.5">
